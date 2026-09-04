@@ -12,7 +12,7 @@ cloudstream {
     // All of these properties are optional, you can safely remove them
 
     description = "Castle TV Movies and Series Provider"
-    authors = listOf("CNCVerse")
+    authors = listOf("mahdiridoy")
 
     /**
      * Status int as the following:
@@ -27,6 +27,6 @@ cloudstream {
         "TvSeries"
     )
 
-    iconUrl = "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/CastleTvProvider/icon.png"
+    iconUrl = "https://github.com/mahdiridoy/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/CastleTvProvider/icon.png"
 }
 

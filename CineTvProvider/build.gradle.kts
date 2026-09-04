@@ -12,7 +12,7 @@ cloudstream {
     // All of these properties are optional, you can safely remove them
 
     description = "Clone of Cinema, Memesapp , FilmTV etc"
-    authors = listOf("CNCVerse")
+    authors = listOf("mahdiridoy")
 
     /**
      * Status int as the following:

@@ -2,7 +2,7 @@ name: ⭐ Source Request
 description: Request a new Source
 title: "[Site or App Suggestion] "
 labels: [Site or App Request]
-assignees: NivinCNC
+assignees: mahdiridoy
 body:
 
   - type: input

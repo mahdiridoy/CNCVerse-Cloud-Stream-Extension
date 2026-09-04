@@ -2,7 +2,7 @@ name: 🐞 Issue report
 description: Report a source issue (verify source before submitting)
 title: "[Extension Issue] "
 labels: [Bug]
-assignees: NivinCNC
+assignees: mahdiridoy
 body:
 
   - type: markdown

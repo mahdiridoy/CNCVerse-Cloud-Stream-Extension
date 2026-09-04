@@ -9,7 +9,7 @@ android {
 
 cloudstream {
     description = "MovieLinkBD - Largest Movie Download Site in Bangladesh"
-    authors = listOf("NivinCNC")
+    authors = listOf("mahdiridoy")
 
     /**
     * Status int as the following:

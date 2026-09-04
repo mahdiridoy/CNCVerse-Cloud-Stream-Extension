@@ -15,7 +15,7 @@ dependencies {
 cloudstream {
     language = "ta"
     description = "Watch Live TV channels & sports via PlayZTV"
-    authors = listOf("NivinCNC")
+    authors = listOf("mahdiridoy")
 
     /**
      * Status int as the following:
