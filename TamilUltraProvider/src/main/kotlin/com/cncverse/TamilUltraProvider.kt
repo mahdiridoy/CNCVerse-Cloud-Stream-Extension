@@ -33,7 +33,6 @@ class TamilUltraProvider : MainAPI() { // all providers must be an instance of M
     ): HomePageResponse {
         context?.let { ctx ->
             withContext(Dispatchers.Main) {
-                StarPopupHelper.showStarPopupIfNeeded(ctx)
             }
         }
          val genreClasses = listOf(

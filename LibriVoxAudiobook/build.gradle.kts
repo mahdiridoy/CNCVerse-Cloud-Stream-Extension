@@ -11,7 +11,7 @@ cloudstream {
     // All of these properties are optional, you can safely remove them
 
     description = "Audiobooks in public domain"
-    authors = listOf("KillerDogeEmpire, NivinCNC")
+    authors = listOf("KillerDogeEmpire, mahdiridoy")
 
     /**
      * Status int as the following:

@@ -13,7 +13,7 @@ cloudstream {
 
     description = "Telugu Movies Provider - Moviezwap"
     language = "te"
-    authors = listOf("NivinCNC")
+    authors = listOf("mahdiridoy")
 
     /**
     * Status int as the following:
@@ -30,5 +30,5 @@ cloudstream {
     tvTypes = listOf(
         "Movie"
     )
-    iconUrl = "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/master/MoviezwapProvider/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/mahdiridoy/CNCVerse-Cloud-Stream-Extension/master/MoviezwapProvider/icon.png"
 }

@@ -11,7 +11,7 @@ cloudstream {
     language = "ta"
 
     description = "Radio India Provider"
-    authors = listOf("NivinCNC")
+    authors = listOf("mahdiridoy")
 
     status = 1 
     tvTypes = listOf("Live")

@@ -44,7 +44,6 @@ class SunGoProvider : MainAPI() { // all providers must be an instance of MainAP
         request: MainPageRequest
     ): HomePageResponse {
         // Show star popup on first visit (shared across all CNCVerse plugins)
-        context?.let { StarPopupHelper.showStarPopupIfNeeded(it) }
         
         val genreClasses = listOf(
             "genre_tamil" to "Tamil",

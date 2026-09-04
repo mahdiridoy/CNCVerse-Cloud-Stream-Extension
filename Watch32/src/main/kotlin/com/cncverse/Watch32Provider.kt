@@ -59,7 +59,6 @@ class Watch32Provider : MainAPI() {
     ): HomePageResponse {
         context?.let { ctx ->
             withContext(Dispatchers.Main) {
-                StarPopupHelper.showStarPopupIfNeeded(ctx)
             }
         }
         val doc = app.get("$mainUrl/${request.data}?page=$page", cacheTime = 60, timeout = 20).document

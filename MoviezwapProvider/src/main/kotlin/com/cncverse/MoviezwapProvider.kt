@@ -42,7 +42,6 @@ class MoviezwapProvider : MainAPI() {
     ): HomePageResponse {
         context?.let { ctx ->
             withContext(Dispatchers.Main) {
-                StarPopupHelper.showStarPopupIfNeeded(ctx)
             }
         }
         

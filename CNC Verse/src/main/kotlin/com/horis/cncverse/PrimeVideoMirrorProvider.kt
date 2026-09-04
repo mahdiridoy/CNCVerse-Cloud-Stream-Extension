@@ -20,7 +20,6 @@ class PrimeVideoMirrorProvider : MainAPI() {
     private val ott = "pv"
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse? {
-        context?.let { StarPopupHelper.showStarPopupIfNeeded(it) }
         val apiBase = resolveApiUrl()
 
         val response = app.get(

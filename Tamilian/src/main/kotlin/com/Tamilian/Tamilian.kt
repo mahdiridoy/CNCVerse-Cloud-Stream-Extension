@@ -42,7 +42,6 @@ class Tamilian : TmdbProvider() {
         // Show star popup on first visit (shared across all CNCVerse plugins)
         context?.let { ctx ->
             withContext(Dispatchers.Main) {
-                StarPopupHelper.showStarPopupIfNeeded(ctx)
             }
         }
         return super.getMainPage(page, request)

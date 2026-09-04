@@ -32,7 +32,6 @@ class HDO : TmdbProvider() {
         // Show star popup on first home page visit (shared across all CNCVerse plugins)
         cont?.let { context ->
             withContext(Dispatchers.Main) {
-                StarPopupHelper.showStarPopupIfNeeded(context)
             }
         }
         

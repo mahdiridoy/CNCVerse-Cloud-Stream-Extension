@@ -13,7 +13,7 @@ android {
 
 cloudstream {
     description = "Movie and TV Series provider"
-    authors = listOf("Redowan, NivinCNC")
+    authors = listOf("Redowan, mahdiridoy")
 
     /**
     * Status int as the following:
@@ -33,5 +33,5 @@ cloudstream {
     )
     language = "ta"
 
-    iconUrl = "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Rtally/icon.png"
+    iconUrl = "https://github.com/mahdiridoy/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Rtally/icon.png"
 }
