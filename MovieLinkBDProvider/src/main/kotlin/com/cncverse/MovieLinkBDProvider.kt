@@ -18,6 +18,7 @@ import com.lagradost.cloudstream3.newMovieSearchResponse
 import com.lagradost.cloudstream3.newTvSeriesLoadResponse
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.ExtractorLinkType
+import com.lagradost.cloudstream3.Score
 import com.lagradost.cloudstream3.utils.Qualities
 import android.content.Context
 import com.lagradost.cloudstream3.ui.settings.Globals.TV
