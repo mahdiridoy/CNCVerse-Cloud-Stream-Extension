@@ -188,7 +188,7 @@ class M3UPlaylistPlayer(
     override suspend fun getMainPage(
         page: Int,
         request : MainPageRequest
-    ): HomePageResponse {         }
+    ): HomePageResponse {
       
         val data = IptvPlaylistParser().parseM3U(decryptedContent)
         return newHomePageResponse(data.items.groupBy{it.attributes["group-title"]}.map { group ->

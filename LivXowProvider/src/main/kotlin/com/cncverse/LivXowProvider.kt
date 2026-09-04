@@ -228,7 +228,7 @@ private fun String.hexToBase64UrlOrNull(): String? {
     override suspend fun getMainPage(
         page: Int,
         request : MainPageRequest
-    ): HomePageResponse {         }
+    ): HomePageResponse {
       
 
         // Show star popup on first visit (shared across all CNCVerse plugins)

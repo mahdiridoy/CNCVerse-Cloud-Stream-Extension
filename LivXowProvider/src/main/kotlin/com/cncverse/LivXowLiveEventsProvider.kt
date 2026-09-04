@@ -352,7 +352,7 @@ class LivXowLiveEventsProvider : MainAPI() {
         }
     }
 
-    override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {         }
+    override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
       
         // Show star popup on first visit
 
