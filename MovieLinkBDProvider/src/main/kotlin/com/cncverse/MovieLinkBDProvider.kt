@@ -21,8 +21,6 @@ import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import com.lagradost.cloudstream3.Score
 import com.lagradost.cloudstream3.utils.Qualities
 import android.content.Context
-import com.lagradost.cloudstream3.ui.settings.Globals.TV
-
 class MovieLinkBDProvider : MainAPI() {
     companion object {
         var appContext: Context? = null

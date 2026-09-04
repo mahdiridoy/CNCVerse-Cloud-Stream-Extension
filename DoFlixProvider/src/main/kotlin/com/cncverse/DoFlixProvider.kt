@@ -15,9 +15,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Handler
 import android.os.Looper
-import com.lagradost.cloudstream3.ui.settings.Globals.TV
-import com.lagradost.cloudstream3.ui.settings.Globals.isLayout
-
 class HeaderReplacementInterceptor(private val customHeaders: Map<String, String>) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val originalRequest = chain.request()
@@ -835,7 +832,6 @@ class DoFlixProvider : MainAPI() {
     }
 
     private fun showTelegramPopup() {
-        if (isLayout(TV)) return
         val ctx = context ?: return
         if (telegramPopupShown) return
         val prefs = ctx.getSharedPreferences("cncverse_prefs", android.content.Context.MODE_PRIVATE)

@@ -314,10 +314,6 @@ private fun String.hexToBase64UrlOrNull(): String? {
     private fun showTelegramPopup() {
         val ctx = context ?: return
         if (telegramPopupShown) return
-        val isTV = try {
-            com.lagradost.cloudstream3.ui.settings.Globals.isLayout(com.lagradost.cloudstream3.ui.settings.Globals.TV)
-        } catch(e: Exception) { false }
-        if (isTV) return
         val prefs = ctx.getSharedPreferences("cncverse_prefs", android.content.Context.MODE_PRIVATE)
         if (prefs.getBoolean("telegram_popup_shown", false)) { telegramPopupShown = true; return }
         telegramPopupShown = true

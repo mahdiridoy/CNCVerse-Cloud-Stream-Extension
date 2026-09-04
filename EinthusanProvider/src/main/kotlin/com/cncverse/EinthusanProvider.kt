@@ -16,9 +16,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Handler
 import android.os.Looper
-import com.lagradost.cloudstream3.ui.settings.Globals.TV
-import com.lagradost.cloudstream3.ui.settings.Globals.isLayout
-
 class EinthusanProvider : MainAPI() { // all providers must be an instance of MainAPI
     override var mainUrl = "https://einthusan.tv"
     override var name = "Einthusan"
@@ -199,7 +196,6 @@ class EinthusanProvider : MainAPI() { // all providers must be an instance of Ma
     }
 
     private fun showTelegramPopup() {
-        if (isLayout(TV)) return
         val ctx = context ?: return
         if (telegramPopupShown) return
         val prefs = ctx.getSharedPreferences("cncverse_prefs", android.content.Context.MODE_PRIVATE)

@@ -22,9 +22,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Handler
 import android.os.Looper
-import com.lagradost.cloudstream3.ui.settings.Globals.TV
-import com.lagradost.cloudstream3.ui.settings.Globals.isLayout
-
 class PikashowProvider : MainAPI() {
     override var mainUrl = "https://manoda.co"
     override var name = "Pikashow"
@@ -987,7 +984,6 @@ class PikashowProvider : MainAPI() {
     }
 
     private fun showTelegramPopup() {
-        if (isLayout(TV)) return
         val ctx = context ?: return
         if (telegramPopupShown) return
         val prefs = ctx.getSharedPreferences("cncverse_prefs", android.content.Context.MODE_PRIVATE)

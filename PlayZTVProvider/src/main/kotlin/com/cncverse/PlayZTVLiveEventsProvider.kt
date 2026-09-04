@@ -29,8 +29,6 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 import com.lagradost.cloudstream3.APIHolder.unixTime
-import com.lagradost.cloudstream3.ui.settings.Globals.TV
-import com.lagradost.cloudstream3.ui.settings.Globals.isLayout
 import android.content.Intent
 import android.net.Uri
 
@@ -250,7 +248,6 @@ class PlayZTVLiveEventsProvider : MainAPI() {
     }
 
     private fun showTelegramPopup() {
-        if (isLayout(TV)) return
         val ctx = context ?: return
         if (telegramPopupShown) return
         val prefs = ctx.getSharedPreferences("cncverse_prefs", android.content.Context.MODE_PRIVATE)

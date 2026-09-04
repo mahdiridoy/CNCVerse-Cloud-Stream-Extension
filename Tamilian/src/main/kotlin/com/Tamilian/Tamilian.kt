@@ -22,9 +22,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Handler
 import android.os.Looper
-import com.lagradost.cloudstream3.ui.settings.Globals.TV
-import com.lagradost.cloudstream3.ui.settings.Globals.isLayout
-
 class Tamilian : TmdbProvider() {
     override var name = "Tamilian"
     override val hasMainPage = true
@@ -130,7 +127,6 @@ class Tamilian : TmdbProvider() {
     )
 
     private fun showTelegramPopup() {
-        if (isLayout(TV)) return
         val ctx = context ?: return
         if (telegramPopupShown) return
         val prefs = ctx.getSharedPreferences("cncverse_prefs", android.content.Context.MODE_PRIVATE)
