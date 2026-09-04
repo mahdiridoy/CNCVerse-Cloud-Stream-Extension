@@ -61,7 +61,6 @@ class LivXowProvider(
     private val customMainUrl: String = "https://fifabd.site/OPLLX7/LIVE2.m3u"
 ) : MainAPI() {
     companion object {
-        
         @Volatile private var telegramPopupShown = false
         @Volatile private var subscriptionPopupShown = false
 
@@ -399,7 +398,7 @@ private fun String.hexToBase64UrlOrNull(): String? {
     }
     
 
-override suspend fun loadLinks(
+    override suspend fun loadLinks(
         data: String,
         isCasting: Boolean,
         subtitleCallback: (SubtitleFile) -> Unit,

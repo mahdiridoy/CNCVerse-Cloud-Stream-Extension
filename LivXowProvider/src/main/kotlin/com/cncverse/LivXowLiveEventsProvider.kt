@@ -35,6 +35,7 @@ import android.net.Uri
 
 class LivXowLiveEventsProvider : MainAPI() {
     companion object {
+        
     }
 
     override var mainUrl = DEFAULT_WEB_URL
@@ -244,8 +245,6 @@ class LivXowLiveEventsProvider : MainAPI() {
         }
     }
 
-
-
     // â”€â”€ Subscription popup (once per app session if not subscribed) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    
     private fun showTelegramPopup() {
@@ -355,7 +354,6 @@ class LivXowLiveEventsProvider : MainAPI() {
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
       
         // Show star popup on first visit
-
 
         // Fetch live events using LivXowProviderManager (same as providers)
         val events = LivXowProviderManager.fetchLiveEvents()
