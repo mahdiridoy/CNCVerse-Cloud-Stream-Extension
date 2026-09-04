@@ -263,7 +263,7 @@ class MovieLinkBDProvider : MainAPI() {
                 this.posterUrl = poster
                 this.year = year
                 this.plot = fullPlot.takeIf { it.isNotEmpty() }
-                this.rating = rating?.let { (it * 1000).toInt() }
+                this.score = rating?.let { Score.from10(it.toString()) }
             }
         }
 
@@ -335,7 +335,7 @@ class MovieLinkBDProvider : MainAPI() {
             this.posterUrl = poster
             this.year = year
             this.plot = fullPlot.takeIf { it.isNotEmpty() }
-            this.rating = rating?.let { (it * 1000).toInt() }
+            this.score = rating?.let { Score.from10(it.toString()) }
         }
     }
 
