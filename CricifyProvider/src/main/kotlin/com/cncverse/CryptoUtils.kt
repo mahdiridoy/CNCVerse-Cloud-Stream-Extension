@@ -6,8 +6,8 @@ import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 
 object CryptoUtils {
-    private val CRICIFY_PROVIDER_SECRET1 by lazy { BuildConfig.CRICIFY_PROVIDER_SECRET1 }
-    private val CRICIFY_PROVIDER_SECRET2 by lazy { BuildConfig.CRICIFY_PROVIDER_SECRET2 }
+    private val CRICIFY_PROVIDER_SECRET1 by lazy { BuildConfig.CRICIFY_PROVIDER_SECRET1.takeIf { it.isNotBlank() } ?: "" }
+    private val CRICIFY_PROVIDER_SECRET2 by lazy { BuildConfig.CRICIFY_PROVIDER_SECRET2.takeIf { it.isNotBlank() } ?: "" }
 
     private val KEYS by lazy {
         mapOf(

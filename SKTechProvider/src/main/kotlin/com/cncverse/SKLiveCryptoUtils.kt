@@ -7,11 +7,11 @@ import javax.crypto.spec.SecretKeySpec
 
 
 object SKLiveCryptoUtils {
-    private val V23_KEY = BuildConfig.SKLIVE_V23_KEY.toByteArray(Charsets.UTF_8)
-    private val V23_IV  = BuildConfig.SKLIVE_V23_IV.toByteArray(Charsets.UTF_8)
+    private val V23_KEY = BuildConfig.SKLIVE_V23_KEY.takeIf { it.isNotBlank() }?.toByteArray(Charsets.UTF_8) ?: ByteArray(0)
+    private val V23_IV  = BuildConfig.SKLIVE_V23_IV.takeIf { it.isNotBlank() }?.toByteArray(Charsets.UTF_8) ?: ByteArray(0)
 
-    private val LEGACY_AES_KEY = hexStringToByteArray(BuildConfig.SKLIVE_KEY)
-    private val LEGACY_AES_IV  = hexStringToByteArray(BuildConfig.SKLIVE_IV)
+    private val LEGACY_AES_KEY = try { hexStringToByteArray(BuildConfig.SKLIVE_KEY.takeIf { it.isNotBlank() } ?: "") } catch(e: Exception) { ByteArray(0) }
+    private val LEGACY_AES_IV  = try { hexStringToByteArray(BuildConfig.SKLIVE_IV.takeIf { it.isNotBlank() } ?: "") } catch(e: Exception) { ByteArray(0) }
 
     private val LOOKUP_TABLE_D = (
         "\u0000\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\t\n\u000B\u000C\r\u000E\u000F" +

@@ -134,9 +134,9 @@ suspend fun bypass(mainUrl: String): String {
                 .orEmpty()
         }
     } catch (e: Exception) {
-        // Clear invalid cookie on failure
+        // Clear invalid cookie on failure - return empty to allow fallback
         NetflixMirrorStorage.clearCookie()
-        throw e
+        return ""
     }
 
     // Persist the new cookie

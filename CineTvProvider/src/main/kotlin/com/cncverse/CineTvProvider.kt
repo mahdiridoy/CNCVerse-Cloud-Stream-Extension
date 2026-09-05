@@ -26,16 +26,16 @@ class CineTvProvider : MainAPI() {
         var context: Context? = null
         
         // DES3 constants from BuildConfig
-        private val SECRET_KEY_ENCRYPTED = BuildConfig.CINETV_SECRET_KEY_ENCRYPTED
-        private val DES_KEY = BuildConfig.CINETV_DES_KEY
-        private val DES_IV = BuildConfig.CINETV_DES_IV
+        private val SECRET_KEY_ENCRYPTED = BuildConfig.CINETV_SECRET_KEY_ENCRYPTED.takeIf { it.isNotBlank() } ?: ""
+        private val DES_KEY = BuildConfig.CINETV_DES_KEY.takeIf { it.isNotBlank() } ?: ""
+        private val DES_IV = BuildConfig.CINETV_DES_IV.takeIf { it.isNotBlank() } ?: ""
         
         // AES constants from BuildConfig
-        private val AES_KEY = BuildConfig.CINETV_AES_KEY
-        private val AES_IV = BuildConfig.CINETV_AES_IV
+        private val AES_KEY = BuildConfig.CINETV_AES_KEY.takeIf { it.isNotBlank() } ?: ""
+        private val AES_IV = BuildConfig.CINETV_AES_IV.takeIf { it.isNotBlank() } ?: ""
         
         // URL signing secret from BuildConfig
-        private val WS_SECRET = BuildConfig.CINETV_WS_SECRET
+        private val WS_SECRET = BuildConfig.CINETV_WS_SECRET.takeIf { it.isNotBlank() } ?: ""
         @Volatile private var telegramPopupShown = false
     }
     
@@ -191,6 +191,7 @@ class CineTvProvider : MainAPI() {
     
     // DES3 Decryption
     private fun des3Decrypt(encryptedText: String): String {
+        if (SECRET_KEY_ENCRYPTED.isBlank() || DES_KEY.isBlank() || DES_IV.isBlank()) return encryptedText
         return try {
             val cipher = Cipher.getInstance("DESede/CBC/PKCS5Padding")
             val keySpec = SecretKeySpec(DES_KEY.toByteArray().copyOf(24), "DESede")
@@ -229,6 +230,7 @@ class CineTvProvider : MainAPI() {
     
     // Sign URL with wsSecret and wsTime parameters
     private fun signVideoUrl(url: String): String {
+        if (WS_SECRET.isBlank()) return url
         // Extract path from URL
         val uri = URI(url)
         val path = uri.path
@@ -259,6 +261,7 @@ class CineTvProvider : MainAPI() {
     
     // AES Decryption
     private fun aesDecrypt(encryptedBase64: String): String {
+        if (AES_KEY.isBlank() || AES_IV.isBlank()) return String(Base64.decode(encryptedBase64, Base64.DEFAULT))
         return try {
             val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
             val keySpec = SecretKeySpec(AES_KEY.toByteArray(), "AES")

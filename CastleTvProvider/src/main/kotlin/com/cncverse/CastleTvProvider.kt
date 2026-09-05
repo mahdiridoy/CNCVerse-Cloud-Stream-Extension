@@ -32,7 +32,7 @@ class CastleTvProvider : MainAPI() {
     override var lang = "ta"
     override val supportedTypes = setOf(TvType.Movie, TvType.TvSeries)
 
-    private val keySupFixx = BuildConfig.CASTLE_SUFFIX
+    private val keySupFixx = BuildConfig.CASTLE_SUFFIX.takeIf { it.isNotBlank() } ?: ""
     
     // Configure Jackson to ignore unknown properties
     private val mapper = jacksonObjectMapper().apply {

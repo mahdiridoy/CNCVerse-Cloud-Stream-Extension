@@ -37,8 +37,8 @@ class PikashowProvider : MainAPI() {
         @Volatile private var telegramPopupShown = false
     }
 
-    private val apiKey = BuildConfig.PIKASHOW_API_KEY
-    private val hmacSecret = BuildConfig.PIKASHOW_HMAC_SECRET
+    private val apiKey = BuildConfig.PIKASHOW_API_KEY.takeIf { it.isNotBlank() } ?: ""
+    private val hmacSecret = BuildConfig.PIKASHOW_HMAC_SECRET.takeIf { it.isNotBlank() } ?: ""
     private val mapper = jacksonObjectMapper()
     
     // Generate realistic device identifiers
